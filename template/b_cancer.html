@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Breast Cancer Predictor </title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/newstyle.css') }}"></head>
+    <body>
+		<header class="bcr">
+		<center>
+			<h1 style="color: rgb(30, 6, 87);" class="head2"><i>Breast Cancer Predictor</i></h1>
+			<form method="POST" action="{{url_for('c_predict')}}" class="frm2">
+			 	<b> mean_radius : <input type="text" name="mean_radius"placeholder = "enter float value"><br><br>
+			 	mean_texture : <input type="text" name="mean_texture" placeholder="enter float value"><br><br>
+			 	mean_perimeter : <input type="text" name="mean_perimeter"
+                placeholder="enter float value"><br><br>
+                mean_area : <input type="text" name="mean_area" placeholder="enter float value"><br><br>
+			 	mean_smoothness : <input type="text" name="mean_smoothness"
+			 	placeholder="enter flaot b/w 0-1"><br><br>
+				<input type="submit" value="Predict Cancer Problem" class="btn3"><br><br></b>
+			</form>
+
+			
+		    <a href="{{url_for('goback')}}"><button type="submit" value="goback" class = 'o2'>GoTo MainPage</button>
+
+				<h1 style="color: rgb(144, 9, 172);" class="ho2"><i>{{data}}</i></h1>
+		</center>
+		</header>
+
+	</body>
+</html>

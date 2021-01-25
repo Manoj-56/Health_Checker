@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Using HTML and CSS</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/newstyle.css') }}">
+	
+</head>
+<body>
+    <header>
+		<center>
+    	<div class ="top">
+    		<ul class="nav-menu">
+    			<li class="homebtn"><a href="{{url_for('heart_disease')}}"><b>Heart Disease Predictor</b></li>
+    			<li> <a href="{{url_for('diabetes')}}"><b>Diabetes Predictor</b></li>
+				<li> <a href="{{url_for('cancer')}}"><b>Breast Cancer Predictor</b></li>
+    			
+			</ul>	
+		</center>
+    </header>
+</body>
+</html>

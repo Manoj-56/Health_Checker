@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Diabetes Predictor </title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/newstyle.css') }}"></head>
+	<body >
+		<header class='dbt'>
+		 	<center>
+			
+			<h1 style="color: rgb(21, 187, 6);" class='head1'><i> Diabetes Predictor</i> </h1>
+			<form method="POST" action="{{url_for('d_predict')}}" class='frm1'>
+			 	<b> Age : <input type="text" name="age"placeholder = "enter age"><br><br>
+			 	Glucose : <input type="text" name="Glucose" placeholder="enter Glucose value"><br><br>
+			 	Blood Pressure : <input type="text" name="bp"
+                placeholder="enter bp"><br><br>
+                SkinThickness : <input type="text" name="ST" placeholder="enter Sk value"><br><br>
+			 	Insulin : <input type="text" name="Insulin"
+			 	placeholder="enter Insulin"><br><br>
+			 	DiabetesPedigreeFunction : <input type="text" name="DPF"
+			 	placeholder="enter value b/w 0-1"><br><br></b>
+				<input type="submit" value="Predict diabetes Problem" class="btn1">
+			</form>
+
+		    <a href="{{url_for('goback')}}"><button type="submit" value="goback" class = 'o1'>GoTo MainPage</button>
+
+			<h1 style="color: rgb(31, 7, 167);" class="ho1"><i>{{data}}</i></h1>
+			</center>
+	   	</header>
+		
+	</body>
+</html>

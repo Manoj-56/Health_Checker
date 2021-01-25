@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Heart Disease Predictor </title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/newstyle.css') }}">
+</head>
+
+	<body>
+		<header class="hrt">
+		<center>
+			<h1 style="color: rgb(252, 11, 11);" class="head"><i>Heart Disease Predictor</i></h1>
+			<form method="POST" action="{{url_for('h_predict')}}" class="frm">
+			 	<b> Age : <input type="text" name="age"placeholder = "enter age"><br><br>
+			 	Cholestoral : <input type="text" name="chol" placeholder="enter chol value"><br><br>
+			 	Blood Pressure : <input type="text" name="bp"
+			 	placeholder="enter bp"><br><br>
+			 	Chest Pain : <input type="text" name="cp"
+			 	placeholder="enter value 1-4"><br><br></b>
+				<input type="submit" value="Predict Heart Problem" class="btn2">
+			</form>
+
+		    <a href="{{url_for('goback')}}"><button type="submit" value="goback" class = 'o'>GoTo MainPage</button>
+
+			<h1 style="color: rgb(216, 5, 5);" class="ho"><i>{{data}}</i></h1>
+		</center>
+		</header>
+
+	</body>
+</html>
