@@ -1,1 +1,1 @@
-web : run this thing 
+web : run this thing app: myapp
